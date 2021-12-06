@@ -1,0 +1,596 @@
+/*Parcial FrontEnd1:
+elaboró Marisol Vanegas. 
+Camada 4. 
+julietavan@hotmail.com*/
+*{
+    font-family:'Be Vietnam Pro', sans-serif;
+    padding: 0;
+    margin:0;
+    border:0;
+    box-sizing:border-box;
+}
+body{
+    width: 1440px;
+    background-color:#FFFFFF;
+}
+header{
+    width:100%;
+    height:174px;
+    padding: 65px 165px 65px 165px;
+    background-color: #FFFFFF;
+    display:flex;
+}
+.logo{
+    width: 145.54px;
+    height: 23.74px;
+    margin-top: 10.13px;
+}
+label #bars, label #cancel{
+    position: absolute;
+    z-index: 101;
+}
+label #cancel{
+    opacity: 0;
+    visibility: hidden;
+}
+#b_menu{
+    float: right;
+    display: none;
+}
+header label{
+    display: none;
+    width:60px;
+    padding: 10px;
+    transition: all 500ms ease;
+    float: right;
+}
+.menu{
+    display: flex;
+    width: 100%;
+}
+.menu ul li:hover{
+    color:gray;
+    cursor: pointer;
+}
+.menu ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    margin-left: 204px;
+    margin-right: 224px;
+    font-size: 13px;
+    font-weight: 500;
+    width: 402px;
+    margin-top: 10.5px;
+    padding-inline-start: 0px;
+}
+.menu ul li{
+    font-weight: 500;
+    text-decoration: none;
+    color:#242E52;
+    transition: all 500ms ease;
+}
+/*el espacio entre los elementos de lista es mas pequeño, 
+dado que los caracteres son un poco mas grandes a los que solicitaban
+se usa la fuente Pro, la otra no se encuentra disponible*/
+.menu ul li:nth-child(-n+5){
+    padding-left: 20px;
+}
+button{
+    background-color:#F3603B;
+    border-radius: 50px;
+    color:#FFFFFF;
+    font-size: 13.18px;
+    font-weight: 500;
+    line-height: 19.26px;
+    text-align: center;
+    width: 134px;
+    height: 44px;
+    padding: 10px;
+    margin-right: 165px;
+    box-shadow: 0px 1px 8px 1px #ED8D77;
+}
+button:hover{
+    background-color:#ED8D77;
+    cursor: pointer;
+}
+.principal{
+    display: flex;
+}
+.principal h1{
+    font-size: 58px;
+    font-weight:700;
+    line-height: 66.47px;
+    margin-left:165px;
+    margin-top: 110px;
+    margin-bottom: 28px;
+    color: #232c50;
+}
+.principal p{
+    width: 450px;
+    margin-left: 165px;
+    margin-right: 110px;
+    font-size: 16.56px;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+.principal button{
+    margin-left: 165px;
+}
+.principal img{
+    width: 580px;
+    margin-right: 146px;
+    margin-bottom:99px;
+}
+.second{
+    display: flex;
+}
+.different {
+    margin-left: 165px;
+    margin-right: 218px;
+    margin-top: 13px;
+}
+h2{
+    color: #232851;
+    margin-bottom: 36px;
+    font-size: 36px;
+    width: 433px;
+}
+.items{
+    width: 458px;
+    margin-right:188px;
+    margin-top: 13px;
+    margin-bottom: 132.5px;
+}
+.items span{
+    position: absolute;
+    width: 69px;
+    height: 43px;
+    background-color: #F3603B;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 25px 10px 23px;
+    justify-content: center;
+}
+.items ul li{
+    text-decoration: none;
+    list-style: none;
+}
+.items ul li h3{
+    position: relative;
+    margin-left: 92px;
+    font-size: 16px;
+    font-weight: 700px;
+    margin-bottom: 18px;
+    padding-top: 10px;
+    color: #323851;
+}
+.items p{
+    margin-left: 93px;
+    font-style: normal;
+    font-size: 16.3px;
+    color: #b3b2b7;
+    height: 104px;
+    width: 458px;
+    margin-top: 18px;
+}
+.they h2{
+    margin: 0 553px;
+    margin-bottom: 74px;
+    font-size: 39.21px;
+    color:#242E53;
+}
+.they div{
+    display: flex;
+    flex:1 1 1;
+}
+.they div figure{
+    padding-left: 61px;
+    text-align: center;
+}
+.they figcaption{
+    font-size: 16.07px;
+    margin-top:21px;
+    margin-bottom: 21px;
+    font-size: 16.07px;
+    line-height: 25.17px;
+    font-weight: 700;
+    color: #3f4868;
+}
+.they p{
+    color: #b9b9c1;
+    width: 403px;
+    height: 78px;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 21px;
+}
+.they button{
+    margin: 45px 653px;
+}
+.they span{
+    display: none;
+}
+.orange{
+    height: 224px;
+    background-color:#F3613C;
+    display:flex;
+    width: 100%;
+    padding: 64px 165px;
+}
+/*la fuente es un poco mas pequeña porque la Pro viene mas gordita*/
+.orange p{
+    font-size: 38px;
+    font-weight: 700;
+    color: #FFFFFF;
+    width: 438px;
+}
+.gs_white{
+    color: #F3603B;
+    background-color: #FFFFFF;
+    position: relative;
+    left: 538px;
+    margin-top: 26px;
+}
+footer{
+    width: 100%;
+    display:flex;
+    height: 247px;
+    background-color: #1e1e26;
+    color: #FFFFFF;
+    padding-right: 164.89px;
+}
+.logowhite{
+    width:145.43px;
+    height: 26.18px;
+    margin-top:67.26px;
+    margin-left:170.88px;
+}
+.icons{
+    width: 153.89px;
+    height: 22.05px;
+    position: absolute;
+    margin-left: 170.88px;
+    margin-top: 157.68px;
+}
+footer i{
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+}
+footer i:hover{
+    color: #F3603B;
+}
+footer ul{
+    list-style: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.38px;
+    font-style: normal;
+    margin-top: 52.93px;
+}
+footer ul li:hover{
+    color:#F3603B;
+    cursor: pointer;
+}
+footer ul li{
+    margin-bottom: 12px;
+}
+.listone{
+    margin-left: 126.47px;
+}
+.listtwo{
+    margin-left: 219px;
+}
+#inbox{
+    width: 201px;
+    height: 44px;
+    border-radius: 50px;
+    padding:12.5px 48px 12.5px 10px;
+    color: #a0a0a0;
+}
+#go{
+    width: 63px;
+    height: 42px;
+    box-shadow: none;
+    margin-left: 9px;
+    position: static;
+}
+.search{
+    margin-top:56.29px;
+    position: absolute;
+    margin-left:1001.21px;
+}
+.search p{
+    position:relative;
+    font-size: 12.5px;
+    color:#8c8c94;
+    left: 58.96px;
+    margin-top:73.93px;
+}
+
+@media screen and (max-width: 375px){
+    body{
+        width: 100%;
+        background-color:#FFFFFF;
+        margin:0px;
+        padding: 0px;
+    }
+    .logo{
+        margin-top:42px;
+        margin-bottom: 17px;
+        margin-left:22px;
+    }
+    header{
+        padding: 0;
+        width: 100%;
+        height: 95px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header label{
+        display:block;
+        z-index: 102;
+    }
+    .new{
+        display: none;
+    }
+    .menu{
+        position: absolute;
+        width: 100%;
+        margin-top: -500%;
+        padding-top: 574px;
+        transition: all 500ms ease;
+        z-index: 2;
+    }
+    .menu ul{
+        width: 100%;
+        height:484px;
+        background-color:#F3603B;
+        flex-direction: column;
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+    }
+    .menu ul li{
+        font-size: 15px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 30px;
+        padding: 0px;
+        margin:0;
+    }
+    #b_menu:checked~.menu{
+        margin: 0;
+    }
+    #b_menu:checked ~ label #bars{
+        opacity: 0;
+        visibility: hidden;
+    }
+    #b_menu:checked ~ label #cancel{
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu button{
+        position: absolute;
+        margin:220px 120px;
+    }
+    .menu ul li:nth-child(-n+5){
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    .principal{
+        display:block;
+        width: 100%;
+        margin: 0px;
+    }
+    .principal img{
+        width: 100%;
+        position: relative;
+    }
+    .principal h1{
+        width: 100%;
+        font-size: 38px;
+        line-height: 50px;
+        margin:350px 0px;
+        text-align: center;
+        position: absolute;
+    }
+    .principal p{
+        width: 100%;
+        font-size: 16px;
+        line-height: 25px;
+        margin:500px 0px;
+        text-align:center;
+        padding:20px;
+        position: absolute; 
+        color: #a0a0a0;
+    }
+    .principal p br{
+        display: none;
+    }
+    .principal button{
+        margin-left: 120.5px;
+        margin-top:620px;
+        position:absolute;
+    }
+    .second{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 15px;
+        position: relative;
+        margin-top: 60px;
+    }
+    .second h2{
+        width: 100%;
+        font-size: 31px;
+        margin-top:80px;
+        padding: 20px;
+        margin: 0px;
+        text-align: center;
+    }
+    .second h2 br{
+        display:none;
+    }
+    .second p{
+        width: 100%;
+        color:#a0a0a0;
+        text-align: center;
+        line-height: 28px;
+    }
+    .different{
+        margin: 210px 0px 50px 0px;
+        position: relative;
+    }
+    .items{
+        width: 100%;
+        margin:0px;
+        position: relative;
+    }
+    .items span{
+        position: absolute;
+        margin-left: 20px;
+        
+    }
+    .items ul li h3{
+        position: relative;
+        margin-left:64px;
+        font-size: 14px;
+        font-weight: 700px;
+        margin-bottom: 18px;
+        padding-top: 11px;
+        padding-left: 40px;
+        color: #323851;
+        background-color: rgba(250, 125, 5, 20%);
+        height: 43px;
+    }
+    .items p{
+        margin-left: 20px;
+        padding-left: 0px;
+        padding-right: 50px;
+        font-style: normal;
+        font-size: 12px;
+        color: #b3b2b7;
+        width: 100%;
+        margin-top: 18px;
+        text-align: left;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+    .they{
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+    }
+    .they h2{
+        width: 100%;
+        margin: 0%;
+        font-size:25px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .they div{
+        overflow: scroll;
+        width: 100%;
+        height: 250px;
+        padding: 0px;
+    }
+    .they div figure{
+        width: 100%;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .they img{
+        width: 80px;
+    }
+    .they figcaption{
+        margin-bottom: 0px;
+    }
+    .they p{
+        width: 375px;
+        padding:20px 50px 0px 50px;
+        margin-left: 0px;
+        font-size: 10px;
+        line-height: 24px;
+    }
+    .they button{
+        margin:50px auto;
+    }
+    .they span{
+        color:#F3603B;
+        display: inline-block;
+        margin: 25px auto 0px;
+    }
+    .orange{
+        width: 100%;
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+        padding:0px;
+    }
+    .orange p{
+        width: 100%;
+        padding:100px 50px 25px 50px;
+        font-size: 32px;
+        text-align: center;
+    }
+    .orange button{
+        margin:0px auto;
+        left: 0px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+    }
+    .search{
+        margin:50px 40px;
+        display:inline-block;
+        position: absolute;
+    }
+    #inbox{
+        width: 210px;
+    }
+    #go{
+        margin-right: 0px;
+        width: 70px;
+    }
+    .search p{
+        position: absolute;
+        width: 100%;
+        left: 30px;
+        top:330px;
+    }
+    .logowhite{
+        top: 320px; 
+        left: 100px;
+        position: relative;
+        margin-left: 0px;
+    }
+    footer ul{
+        margin-top: 0px;
+    }
+    .listone{
+        margin: 40px 50px 40px 60px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .listtwo{
+        margin:135px 30px 40px 220px;
+        position: absolute;
+    }
+    .icons{
+        position:none;
+        margin:290px 10px 0px 20px;
+        width: 300px;
+        font-size: 32px;
+    }
+    footer a{
+        padding-left: 33px;
+    }
+}
